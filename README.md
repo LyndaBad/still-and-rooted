@@ -2,7 +2,13 @@
 Personal Bible study app with Supabase Auth and private cloud reflections.
 
 ## Deployment status
-Source prepared for LyndaBad/still-and-rooted. Supabase project, database migration, and hosting are not yet provisioned. Cloud sign-in stays disabled until configured.
+GitHub source is in LyndaBad/still-and-rooted. Supabase project yphzzfbcoqzfckjlfhjz is on the Free plan in the owner-only Still and Rooted Personal organization. The schema and RLS policies are installed. Project URL and public key are configured. Authentication is prepared for https://lyndabad.github.io/still-and-rooted/.
+
+Hosting is not enabled yet: GitHub Pages on this account requires a public repository. User approval for that visibility change is pending. A real browser sign-in and two-device save test remain required after publication.
+
+## Verified
+- Database owner read/update succeeds; cross-account read/update/insert and anonymous read are blocked. Transactional test fixtures were rolled back.
+- Cloud adapter tests passed for load/save, offline retry, explicit local-note import, blocked sign-out with unsynced drafts, and separation of guest/cloud notes.
 
 ## Free setup
 1. Create a free Supabase organization/project (do not select Pro or add billing).
